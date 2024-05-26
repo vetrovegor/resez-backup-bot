@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  backup-bot:
+    image: xw1nchester/resez-backup-bot
+    container_name: resez-backup-bot
+    environment:
+      - BOT_TOKEN=
+      - GROUP_ID=
+      - DIRECTORY_PATH=
+      - ENABLE_GROUP_MESSAGES=
+    volumes:
+      - /Users/xw1nchester/Desktop/deploy:/app/deploy
+    restart: unless-stopped
